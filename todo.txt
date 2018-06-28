@@ -1,0 +1,4 @@
+1. add feature to search is post new or old 
+2. split web scraper and twitter bot in 2 file and import them into one file 
+3. try to refactor and clean code
+4. create good doc for this
