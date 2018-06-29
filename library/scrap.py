@@ -5,8 +5,6 @@ import sys
 reload(sys)
 sys.setdefaultencoding('utf-8')
 def sC():
-	global titlePost
-	global correctUrl
 	url = 'http://www.thecoci.me/swift' # where you need to scrap from this ? insert link here
 
 	response = get(url) #request to get url
@@ -16,8 +14,9 @@ def sC():
 	titlePost = soup.find('a', {'itemprop': 'url'}).get_text()
 	urlPost = soup.find('a', {'itemprop': 'url'})['href']
 	correctUrl ="www.thecoci.me"+urlPost
-	return titlePost
-	return correctUrl
+	return titlePost,correctUrl
+titlePost,correctUrl = sC()	
+
 '''if need scrap all item
 	for link in soup.find_all('a', {'itemprop': 'url'}):
     print(link['href'])
