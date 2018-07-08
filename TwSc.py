@@ -1,5 +1,5 @@
-from library import scrap
-from library import tweet
+from lib import scrap
+from lib import tweet
 
 scrap.sC()
 if scrap.titlePost in open('post.txt').read():
@@ -8,5 +8,6 @@ else:
 	f=open("post.txt", "a+")
 	f.write("\n" + scrap.titlePost)
 	tweet.tweeti(scrap.titlePost, scrap.correctUrl)
-
+	print("done")
+	
 

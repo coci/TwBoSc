@@ -1,6 +1,8 @@
-/TwBoSc/post.txt
+./post.txt
 /lib/cfg.py
 /lib/*.pyc
-
+post.txt
+/post.txt
+*/post.txt
 
 
